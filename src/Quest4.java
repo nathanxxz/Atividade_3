@@ -4,19 +4,16 @@ public class Quest4 {
     public static void main(String[]args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("INFORME A QUANTIDADE DE NOTAS");
-        double soma=0;
-        double nums= sc.nextDouble();
-        for(int i=1;i<=nums;i++){
+        int qtd= sc.nextInt();
+        for(int i=0;i<qtd;i++){
             System.out.println("INFORME A NOTA");
-            double nota= sc.nextDouble();
-            nota+=soma;
-            double media=soma/nums;
-            if (media>=7 && media<=10){
-                System.out.println("Aprovado");
-
+            int n= sc.nextInt();
+            int media=n+i/qtd;
+            if(media>=7 && media<=10){
+                System.out.printf("Aprovado e sua media foi %d\n",media);
             }
-            else{
-                System.out.println("Reprovado");
+            else
+                System.out.printf("Reprovado e sua media foi %d\n",media);
 
         }
-    }}}
+    }}
